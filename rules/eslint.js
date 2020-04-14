@@ -26,7 +26,14 @@ const rules = {
   // 一个文件最多有 400 行，忽略空白行和注释后
   'max-lines': ['error', { max: 400, skipBlankLines: true, skipComments: true }],
   // 一行的最大长度为 120
-  'max-len': ['error', { code: 120, ignoreUrls: true, ignoreTemplateLiterals: true }],
+  'max-len': ['error', {
+    code: 120,
+    ignoreStrings: true,
+    ignoreUrls: true,
+    ignoreTemplateLiterals: true,
+    ignoreComments: true,
+    ignoreTrailingComments: true,
+  }],
 
   /* -------------------------------- function -------------------------------- */
   // 一个函数至多有 40 行
