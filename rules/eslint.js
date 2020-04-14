@@ -128,7 +128,7 @@ const rules = {
   // 要求大括号中有空格
   'object-curly-spacing': ['error', 'always'],
   // 对象属性如果换行，应该每个属性占一行
-  'object-property-newline': 'error',
+  'object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
   // 操作符如果要换行放在前面
   'operator-linebreak': ['error', 'before'],
   // 冒号后有一个空格，前面禁止空格

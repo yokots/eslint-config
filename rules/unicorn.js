@@ -82,11 +82,11 @@ const rules = {
   // 使用 Buffer.from() 和 Buffer.alloc() 代替废弃的 new Buffer()
   'no-new-buffer': 'error',
   // 禁止嵌套的三元表达式，需嵌套括号
-  'no-nested-ternary': 'error',
+  'no-nested-ternary': 'off',
   // 使用 eslint-disable 时要明确指定禁用哪条规则
   'no-abusive-eslint-disable': 'error',
-  // 使用缩写时警告
-  'prevent-abbreviations': 'warn',
+  // 使用缩写时警告, 会自动修复，应该只警告
+  'prevent-abbreviations': 'off',
 };
 
 const plugin = 'unicorn';
