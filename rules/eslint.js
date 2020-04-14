@@ -30,7 +30,7 @@ const rules = {
 
   /* -------------------------------- function -------------------------------- */
   // 一个函数至多有 40 行
-  'max-lines-per-function': ['error', 40, { skipBlankLines: true, skipComments: true }],
+  'max-lines-per-function': ['error', { max: 40, skipBlankLines: true, skipComments: true }],
   // 函数括号换行规则,任意参数有换行，需要换行，否则禁止换行
   'function-paren-newline': 'error',
   // 函数名与括号之间不要有空格
