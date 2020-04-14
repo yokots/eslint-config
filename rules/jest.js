@@ -56,7 +56,7 @@ const rules = {
   // 单元测试文件禁止导出
   'no-export': 'error',
   // 不要导入 jest
-  'no-import-jest': 'error',
+  'no-jest-import': 'error',
   // 不要从 __mocks__ 文件夹导入文件
   'no-mocks-import': 'error',
 
