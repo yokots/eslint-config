@@ -9,6 +9,7 @@ const offESRules = {
   'semi': 'off',
   'no-extra-semi': 'off',
   'no-use-before-define': 'off',
+  'no-redeclare': 'off',
   'no-unused-vars': 'off',
   'no-magic-numbers': 'off',
   'no-array-constructor': 'off',
@@ -24,6 +25,7 @@ const offESRules = {
   'no-implied-eval': 'off',
   'unicorn/prefer-starts-ends-with': 'off',
   'unicorn/prefer-includes': 'off',
+  'import/export': 'off',
 };
 
 const rules = {

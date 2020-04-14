@@ -30,7 +30,7 @@ const rules = {
 
   /* -------------------------------- function -------------------------------- */
   // 一个函数至多有 40 行
-  'max-lines-per-function': ['error', 40],
+  'max-lines-per-function': ['error', 40, { skipBlankLines: true, skipComments: true }],
   // 函数括号换行规则,任意参数有换行，需要换行，否则禁止换行
   'function-paren-newline': 'error',
   // 函数名与括号之间不要有空格
@@ -124,7 +124,7 @@ const rules = {
   // 禁止属性前有空白
   'no-whitespace-before-property': 'error',
   // 强制大括号内换行符的一致性
-  'object-curly-newline': ['error', { multiline: true, minProperties: 1 }],
+  'object-curly-newline': 'off',
   // 要求大括号中有空格
   'object-curly-spacing': ['error', 'always'],
   // 对象属性如果换行，应该每个属性占一行

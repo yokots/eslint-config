@@ -50,8 +50,6 @@ const rules = {
   // 禁止未使用的导入
   'no-unassigned-import': 'error',
 
-  // 文件组织要合理，导入父级目录的模块时警告
-  'no-relative-parent-imports': 'warn',
   // 模块文件要有明确的导入导出
   'unambiguous': 'warn',
   // 尽可能不使用 import * as
