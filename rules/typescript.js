@@ -57,13 +57,6 @@ const rules = {
       leadingUnderscore: 'allow',
     },
     {
-      selector: 'parameter',
-      format: ['PascalCase'],
-      types: ['boolean'],
-      leadingUnderscore: 'forbid',
-      prefix: ['is', 'should', 'can', 'has', 'did', 'will'],
-    },
-    {
       selector: 'property',
       format: ['PascalCase'],
       types: ['boolean'],
