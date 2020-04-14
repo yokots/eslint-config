@@ -47,7 +47,7 @@ const rules = {
   'prefer-todo': 'error',
 
   // 禁止使用钩子
-  'no-hooks': 'error',
+  'no-hooks': 'off',
   // 钩子要放在最前
   'prefer-hooks-on-top': 'error',
   // 不要有重复的钩子
