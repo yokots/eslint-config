@@ -96,7 +96,16 @@ const rules = {
   // 使用单引号
   'quotes': ['error', 'single', { avoidEscape: true }],
   // 接口成员使用分号分割
-  'member-delimiter-style': 'error',
+  'member-delimiter-style': ['error', {
+    multiline: {
+      delimiter: 'semi',
+      requireLast: true,
+    },
+    singleline: {
+      delimiter: 'semi',
+      requireLast: false
+    }
+  }],
 
   /* -------------------------------------------------------------------------- */
   /*                               interface, type                              */

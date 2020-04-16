@@ -66,4 +66,7 @@ module.exports = {
   extends: 'plugin:import/typescript',
   plugins: [plugin],
   rules: prefixRules(rules, plugin),
+  settings: {
+    'import/ignore': ['*.d.ts'],
+  },
 };
