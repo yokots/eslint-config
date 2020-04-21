@@ -140,8 +140,6 @@ const rules = {
   'no-unsafe-call': 'error',
   // 禁止函数返回 any 类型
   'no-unsafe-return': 'error',
-  // 禁止将 any 类型赋值给变量和属性
-  'no-unsafe-assignment': 'error',
 
   /* -------------------------------------------------------------------------- */
   /*                           number & string & regex                          */
@@ -153,12 +151,12 @@ const rules = {
   // +, += 两边使用同类型
   'restrict-plus-operands': ['error', { checkCompoundAssignments: true }],
   // 模板字符串中引用的变量不能是引用类型
-  'restrict-template-expressions': ['error', { 
-    allowNumber: true, 
-    allowBoolean: true, 
-    allowNullable: true, 
+  'restrict-template-expressions': ['error', {
+    allowNumber: true,
+    allowBoolean: true,
+    allowNullable: true,
     allowAny: true,
-   }],
+  }],
   // 避免输出 '[object Object]'
   'no-base-to-string': 'error',
   // 不要使用魔术数字
@@ -348,6 +346,8 @@ const rules = {
   'explicit-function-return-type': 'off',
   // 禁用 type 设定类型
   'no-type-alias': 'off',
+  // 禁止将 any 类型赋值给确定类型变量和属性
+  'no-unsafe-assignment': 'off',
 };
 
 const plugin = '@typescript-eslint';
