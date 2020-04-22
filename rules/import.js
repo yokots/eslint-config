@@ -63,7 +63,6 @@ const rules = {
 const plugin = 'import';
 
 module.exports = {
-  extends: 'plugin:import/typescript',
   plugins: [plugin],
   rules: prefixRules(rules, plugin),
 };

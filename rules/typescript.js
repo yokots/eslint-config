@@ -26,6 +26,7 @@ const offESRules = {
   'unicorn/prefer-starts-ends-with': 'off',
   'unicorn/prefer-includes': 'off',
   'import/export': 'off',
+  'import/no-unresolved': 'off',
 };
 
 const rules = {
