@@ -14,6 +14,7 @@ module.exports = {
         '@typescript-eslint/method-signature-style': 'off',
         'import/unambiguous': 'off',
         'import/no-default-export': 'off',
+        'unicorn/no-abusive-eslint-disable': 'off',
       }
     }
   ]
