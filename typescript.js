@@ -11,8 +11,9 @@ module.exports = {
       rules: {
         'max-lines': 'off',
         '@typescript-eslint/naming-convention': 'off',
-        '@import/unambiguous': 'off',
-        '@import/no-default-export': 'off',
+        '@typescript-eslint/method-signature-style': 'off',
+        'import/unambiguous': 'off',
+        'import/no-default-export': 'off',
       }
     }
   ]
