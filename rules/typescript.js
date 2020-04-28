@@ -2,12 +2,14 @@ const prefixRules = require('./utils');
 
 const offESRules = {
   'indent': 'off',
+  'keyword-spacing': 'off',
   'brace-style': 'off',
   'func-call-spacing': 'off',
   'quotes': 'off',
   'comma-spacing': 'off',
   'semi': 'off',
   'no-extra-semi': 'off',
+  'dot-notation': 'off',
   'no-use-before-define': 'off',
   'no-redeclare': 'off',
   'no-unused-vars': 'off',
@@ -80,10 +82,14 @@ const rules = {
   'type-annotation-spacing': 'error',
   // 缩进用两个空格
   'indent': ['error', 2, { SwitchCase: 1 }],
+  // 关键字周围要保留一个空格
+  'keyword-spacing': 'error',
   // 需要分号
   'semi': 'error',
   // 不要有多余的分号
   'no-extra-semi': 'error',
+  // 读取对象值使用 obj.xxx 而不是 obj['xxx']
+  'dot-notation': ['error', { allowPrivateClassPropertyAccess: false }],
   // 大括号换行风格
   'brace-style': ['error', '1tbs', { allowSingleLine: true }],
   // 逗号后有一个空格
@@ -141,6 +147,8 @@ const rules = {
   'no-unsafe-call': 'error',
   // 禁止函数返回 any 类型
   'no-unsafe-return': 'error',
+  // 不要错误的使用 void 类型
+  'no-invalid-void-type': ['error', { allowInGenericTypeArguments: true }],
 
   /* -------------------------------------------------------------------------- */
   /*                           number & string & regex                          */
