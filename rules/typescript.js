@@ -25,6 +25,7 @@ const offESRules = {
   'no-throw-literal': 'off',
   'no-new-func': 'off',
   'no-implied-eval': 'off',
+  'no-invalid-this': 'off',
   'unicorn/prefer-starts-ends-with': 'off',
   'unicorn/prefer-includes': 'off',
   'import/export': 'off',
@@ -313,6 +314,10 @@ const rules = {
   'switch-exhaustiveness-check': 'error',
   // 使用空值合并运算符
   'prefer-nullish-coalescing': 'error',
+  // 使用可选链操作符
+  'prefer-optional-chain': 'error',
+  // 禁止 this 关键字在类或类对象之外出现
+  'no-invalid-this': 'error',
 
   /* -------------------------------------------------------------------------- */
   /*                                    other                                   */
