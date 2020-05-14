@@ -101,9 +101,6 @@ const rules = {
     { blankLine: 'always', prev: 'break', next: '*' },
   ],
 
-  // 类成员之间要有空行
-  'lines-between-class-members': ['error', 'always'],
-
   /* ------------------------------- whitespace ------------------------------- */
   // 禁止连续的空行
   'no-multiple-empty-lines': ['error', { max: 1 }],
