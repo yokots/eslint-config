@@ -26,6 +26,7 @@ const offESRules = {
   'no-new-func': 'off',
   'no-implied-eval': 'off',
   'no-invalid-this': 'off',
+  'lines-between-class-members': 'off',
   'unicorn/prefer-starts-ends-with': 'off',
   'unicorn/prefer-includes': 'off',
   'import/export': 'off',
@@ -114,6 +115,7 @@ const rules = {
       requireLast: false
     }
   }],
+  'lines-between-class-members': ['error'],
 
   /* -------------------------------------------------------------------------- */
   /*                               interface, type                              */
