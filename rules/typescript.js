@@ -149,7 +149,7 @@ const rules = {
   // 禁止函数返回 any 类型
   'no-unsafe-return': 'error',
   // 不要错误的使用 void 类型
-  'no-invalid-void-type': ['error', { allowInGenericTypeArguments: true }],
+  'no-invalid-void-type': ['off', { allowInGenericTypeArguments: true }],
 
   /* -------------------------------------------------------------------------- */
   /*                           number & string & regex                          */
