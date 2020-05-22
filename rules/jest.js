@@ -30,8 +30,6 @@ const rules = {
 
   // promise 中使用 expect 一定要 return
   'valid-expect-in-promise': 'error',
-  // 不要使用 expect.resolves
-  'no-expect-resolves': 'error',
   // 不要使用 done 来测试异步
   'no-test-callback': 'error',
 
@@ -60,12 +58,22 @@ const rules = {
   // 不要从 __mocks__ 文件夹导入文件
   'no-mocks-import': 'error',
 
+  // deprecated 不要使用 toBeTruthy() 和 toBeFalsy()
+  // 'no-truthy-falsy': 'off',
+  // deprecated 不要使用 expect.resolves
+  // 'no-expect-resolves': 'off',
+  // deprecated prefer-inline-snapshots
+  // 'prefer-inline-snapshots': 'off',
+  'no-restricted-matchers': ['error', {
+    "resolves": "Use `expect(await promise)` instead",
+    "toBeTruthy": "Avoid `toBeTruthy`",
+    "toBeFalsy": "Avoid `toBeFalsy`"
+  }],
+
   // 不要在单测中使用条件判断语句
   'no-if': 'error',
   // 不要使用 jest 提供的别名
   'no-alias-methods': 'error',
-  // 不要使用 toBeTruthy() 和 toBeFalsy()
-  'no-truthy-falsy': 'error',
   // 不要在 catch 语句中使用 expect
   'no-try-expect': 'error',
   // 使用 toBeCalledWith 而不是 toBeCalled
@@ -91,8 +99,6 @@ const rules = {
   'require-top-level-describe': 'off',
   // 不要有大的快照
   'no-large-snapshots': 'off',
-  // prefer-inline-snapshots
-  'prefer-inline-snapshots': 'off',
 };
 
 const plugin = 'jest';

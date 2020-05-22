@@ -1,7 +1,7 @@
 module.exports = {
   extends: ['./jest'],
-  rules:  {
-    'dot-notation': ['error', { allowPrivateClassPropertyAccess: true }],
+  rules: {
+    '@typescript-eslint/dot-notation': ['error', { allowPrivateClassPropertyAccess: true }],
     '@typescript-eslint/no-magic-numbers': 'off',
   }
 }
