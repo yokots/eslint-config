@@ -158,7 +158,7 @@ const rules = {
   'no-base-to-string': 'error',
   // 不要使用魔术数字
   'no-magic-numbers': ['error', {
-    ignore: [0, 1, -1],
+    ignore: [-1, 0, 1, 10, 100, 1000, 7, 24, 30, 60, 200, 400],
     ignoreArrayIndexes: true,
     ignoreNumericLiteralTypes: true,
     ignoreEnums: true,
