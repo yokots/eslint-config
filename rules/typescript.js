@@ -9,6 +9,7 @@ const offESRules = {
   'comma-spacing': 'off',
   'semi': 'off',
   'no-extra-semi': 'off',
+  'no-extra-parens': 'off',
   'dot-notation': 'off',
   'no-use-before-define': 'off',
   'no-redeclare': 'off',
@@ -85,7 +86,9 @@ const rules = {
   // 不要有多余的括号
   'no-extra-parens': ['error', 'all', {
     nestedBinaryExpressions: false,
+    ignoreJSX: 'multi-line',
     enforceForArrowConditionals: false,
+    enforceForSequenceExpressions: false,
     enforceForNewInMemberExpressions: false,
   }],
   // 使用单引号
@@ -151,14 +154,14 @@ const rules = {
   'restrict-template-expressions': ['error', {
     allowNumber: true,
     allowBoolean: true,
-    allowNullable: true,
+    allowNullish: true,
     allowAny: true,
   }],
   // 避免输出 '[object Object]'
   'no-base-to-string': 'error',
   // 不要使用魔术数字
   'no-magic-numbers': ['error', {
-    ignore: [-1, 0, 1, 10, 100, 1000, 7, 24, 30, 60, 200, 400],
+    ignore: [-1, 0, 1, 2, 3, 5, 10, 100, 1000, 7, 24, 30, 60, 200, 400],
     ignoreArrayIndexes: true,
     ignoreNumericLiteralTypes: true,
     ignoreEnums: true,
@@ -337,8 +340,6 @@ const rules = {
   'no-require-import': 'off', // import no-commonjs
   // 和其他规则冲突
   'require-await': 'off',
-  // 统一使用 naming-convention
-  'class-name-casing': 'off',
   // private 成员如果在构造函数之外没被修改定义为 readonly
   'prefer-readonly': 'off',
   // 函数参数使用 readonly 防止参数被修改，使用 eslint: no-param-reassign 代替，虽然这个更严格

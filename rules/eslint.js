@@ -18,6 +18,14 @@ const rules = {
   'block-spacing': ['error', 'always'],
   // 圆括号内两边禁止空格
   'space-in-parens': 'error',
+  // 禁止多余的括号
+  'no-extra-parens': ['error', 'all', {
+    nestedBinaryExpressions: false,
+    ignoreJSX: 'multi-line',
+    enforceForArrowConditionals: false,
+    enforceForSequenceExpressions: false,
+    enforceForNewInMemberExpressions: false,
+  }],
 
   // 在文件末尾新插入一行
   'eol-last': 'error',
@@ -180,8 +188,10 @@ const rules = {
   /* -------------------------------------------------------------------------- */
   /*                               number & string                              */
   /* -------------------------------------------------------------------------- */
+  // 不要损失精度
+  'no-loss-of-precision': 'error',
   'no-magic-numbers': ['error', {
-    ignore: [-1, 0, 1, 10, 100, 1000, 7, 24, 30, 60, 200, 400],
+    ignore: [-1, 0, 1, 2, 3, 5, 10, 100, 1000, 7, 24, 30, 60, 200, 400],
     ignoreArrayIndexes: true,
   }],
   // 禁用八进制字面量
@@ -280,6 +290,8 @@ const rules = {
   'no-case-declarations': 'error',
   // 要有 default case
   'default-case': 'error',
+  // default case 放在最后
+  'default-case-last': 'error',
   // 禁止重复的 case
   'no-duplicate-case': 'error',
   // 禁止在 finally 语句块中出现控制流语句
@@ -442,6 +454,8 @@ const rules = {
   'prefer-named-capture-group': 'error',
   // 强制在 RegExp 上使用 u 标志
   'require-unicode-regexp': 'error',
+  // 禁止没必要的反向引用
+  'no-useless-backreference': 'error',
 
   /* -------------------------------------------------------------------------- */
   /*                              ban some grammar                              */
@@ -491,6 +505,8 @@ const rules = {
   'no-new-wrappers': 'off', // use unicorn new-for-builtins
   'no-duplicated-import': 'off', // import plugin
   'sort-imports': 'off', // import plugin
+  // 禁止部分名称用作导出
+  'no-restricted-exports': 'off',
   // 所有变量使用一个声明语句声明
   'one-var': 'off',
   // 使用驼峰拼写

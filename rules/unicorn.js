@@ -57,6 +57,8 @@ const rules = {
   'error-message': 'error',
   // 在进行类型判断时，抛出 TypeError
   'prefer-type-error': 'error',
+  // 抛出的 error 没有使用的话不需要抛出
+  'prefer-optional-catch-binding': 'error',
 
   // function
   // 如果函数可以定义在更顶级的作用域就定义在更顶级的作用域
