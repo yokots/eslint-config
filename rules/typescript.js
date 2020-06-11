@@ -308,12 +308,16 @@ const rules = {
   'prefer-optional-chain': 'error',
   // 禁止 this 关键字在类或类对象之外出现
   'no-invalid-this': 'error',
+  // 禁止非空判断在双等或三等语句中
+  'no-confusing-non-null-assertion': 'error',
 
   /* -------------------------------------------------------------------------- */
   /*                                    other                                   */
   /* -------------------------------------------------------------------------- */
   // 使用 @ts-ignore 和 @ts-nocheck 警告
   'ban-ts-comment': 'warn',
+  // 禁止 tslint 注释
+  'ban-tslint-comment': 'error',
   // 使用非空断言时警告
   'no-non-null-assertion': 'warn',
   // 不要使用三斜线引入类型
