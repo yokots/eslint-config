@@ -172,7 +172,9 @@ const rules = {
   /*                                  condition                                 */
   /* -------------------------------------------------------------------------- */
   // 条件语句中表达式是严格的布尔值
-  'strict-boolean-expressions': 'error',
+  'strict-boolean-expressions': ['error', {
+    allowNullableBoolean: true,
+  }],
   // 如果表达式是布尔值，不需要和布尔值比较
   'no-unnecessary-boolean-literal-compare': ['error', {
     allowComparingNullableBooleansToTrue: false,
