@@ -174,10 +174,7 @@ const rules = {
   // 条件语句中表达式是严格的布尔值
   'strict-boolean-expressions': 'error',
   // 如果表达式是布尔值，不需要和布尔值比较
-  'no-unnecessary-boolean-literal-compare': ['error', {
-    allowComparingNullableBooleansToTrue: false,
-    allowComparingNullableBooleansToFalse: false,
-  }],
+  'no-unnecessary-boolean-literal-compare': 'error',
   // 禁止不必要的条件判断
   'no-unnecessary-condition': 'error',
 
