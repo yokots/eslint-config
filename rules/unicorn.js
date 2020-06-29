@@ -67,8 +67,8 @@ const rules = {
   'prefer-reflect-apply': 'error',
 
   // string
-  // 使用 replaceAll 而不是 global flag
-  'prefer-replace-all': 'error',
+  // 使用 replaceAll 而不是 global flag () chrome >= 85 firefox >= 77 safari >= 13.3
+  'prefer-replace-all': 'off',
   // Prefer String#startsWith() & String#endsWith() over more complex alternatives.
   'prefer-starts-ends-with': 'error',
   // Prefer String#slice() over String#substr() and String#substring()

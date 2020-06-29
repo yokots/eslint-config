@@ -16,7 +16,7 @@ const rules = {
   // 不要使用一样的 title
   'no-identical-title': 'error',
   // title 使用小写
-  'lowercase-name': 'error',
+  'lowercase-name': ['error', { ignoreTopLevelDescribe: true }],
   // 正确使用 expect 语句
   'valid-expect': ['error', { alwaysAwait: true }],
   // 确保在测试中使用断言
@@ -74,8 +74,8 @@ const rules = {
   'no-if': 'error',
   // 不要使用 jest 提供的别名
   'no-alias-methods': 'error',
-  // 不要在 catch 语句中使用 expect
-  'no-try-expect': 'error',
+  // 不要在 if 或 catch 语句中使用 expect
+  'no-conditional-expect': 'error',
   // 使用 toBeCalledWith 而不是 toBeCalled
   'prefer-called-with': 'error',
   // 使用 jest.spyOn

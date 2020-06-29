@@ -260,6 +260,8 @@ const rules = {
   'prefer-promise-reject-errors': 'error',
   // 除了在 try-catch 中，return promise 前不需要 await
   'no-return-await': 'error',
+  // Promise 构造参数中不需要错误的 return 语句
+  'no-promise-executor-return': 'error',
 
   /* -------------------------------------------------------------------------- */
   /*                                  condition                                 */
@@ -432,6 +434,8 @@ const rules = {
   'no-delete-var': 'error',
   // 禁止对导入的值重新赋值，ts 无效
   'no-import-assign': 'error',
+  // 禁止循环中执行不到的 break return throw 等语句
+  'no-unreachable-loop': 'error',
 
   /* -------------------------------------------------------------------------- */
   /*                                   regexp                                   */
@@ -451,9 +455,9 @@ const rules = {
   // 禁止使用看起来像除法的正则表达式
   'no-div-regex': 'error',
   // 建议在正则表达式中使用命名捕获组
-  'prefer-named-capture-group': 'error',
+  'prefer-named-capture-group': 'warn',
   // 强制在 RegExp 上使用 u 标志
-  'require-unicode-regexp': 'error',
+  'require-unicode-regexp': 'warn',
   // 禁止没必要的反向引用
   'no-useless-backreference': 'error',
 
