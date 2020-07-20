@@ -10,7 +10,7 @@
     "eslint-plugin-import": "~2.22.0",
     "eslint-plugin-jest": "~23.18.0",
     "eslint-plugin-tsdoc": "~0.2.6",
-    "eslint-plugin-unicorn": "~20.1.0"
+    "eslint-plugin-unicorn": "~21.0.0"
   },
   "peerDependencies": {
     "eslint": "~7.3.1"
