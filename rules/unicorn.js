@@ -31,6 +31,8 @@ const rules = {
   'no-for-loop': 'error',
   // length 与具体的数字比较
   'explicit-length-check': 'error',
+  // 优先使用 Array.prototype.find
+  'prefer-array-find': 'error',
 
   // dom
   // Prefer .before() over .insertBefore(), .replaceWith() over .replaceChild(), prefer one of .before(), .after(), .append() or .prepend() over insertAdjacentText() and insertAdjacentElement()
@@ -89,6 +91,8 @@ const rules = {
   'no-abusive-eslint-disable': 'error',
   // 使用缩写时警告, 会自动修复，应该只警告
   'prevent-abbreviations': 'off',
+  // 不要将对象作为默认参数
+  'no-object-as-default-parameter': 'error',
 };
 
 const plugin = 'unicorn';
