@@ -229,7 +229,7 @@ const rules = {
   // 确保 promise 被处理
   'no-floating-promises': 'error',
   // 正确的使用 promise
-  'no-misused-promises': 'error',
+  'no-misused-promises': ['error', { "checksVoidReturn": false }],
   // 除了在 try-catch 中，return promise 前不需要 await
   'return-await': ['error', 'in-try-catch'],
 
