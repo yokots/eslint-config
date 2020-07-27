@@ -92,7 +92,7 @@ const rules = {
   // 使用缩写时警告, 会自动修复，应该只警告
   'prevent-abbreviations': 'off',
   // 不要将对象作为默认参数
-  'no-object-as-default-parameter': 'error',
+  'no-object-as-default-parameter': 'off',
 };
 
 const plugin = 'unicorn';
