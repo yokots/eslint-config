@@ -8,7 +8,7 @@
     "@typescript-eslint/eslint-plugin": "~3.7.0",
     "@typescript-eslint/parser": "~3.7.0",
     "eslint-plugin-import": "~2.22.0",
-    "eslint-plugin-jest": "~23.18.0",
+    "eslint-plugin-jest": "~23.18.2",
     "eslint-plugin-tsdoc": "~0.2.6",
     "eslint-plugin-unicorn": "~21.0.0"
   },
