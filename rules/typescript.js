@@ -359,6 +359,8 @@ const rules = {
   'no-type-alias': 'off',
   // 禁止将 any 类型赋值给确定类型变量和属性
   'no-unsafe-assignment': 'off',
+  // 使用 enum 时初始化
+  'prefer-enum-initializers': 'off',
 };
 
 const plugin = '@typescript-eslint';
