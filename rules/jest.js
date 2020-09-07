@@ -31,7 +31,7 @@ const rules = {
   // promise 中使用 expect 一定要 return
   'valid-expect-in-promise': 'error',
   // 不要使用 done 来测试异步
-  'no-test-callback': 'error',
+  'no-done-callback': 'error',
 
   // 不要注释掉测试，使用 test.only, describe.only
   'no-commented-out-tests': 'error',
@@ -43,6 +43,8 @@ const rules = {
   'no-disabled-tests': 'error',
   // 使用 test.todo
   'prefer-todo': 'error',
+  // 不要使用 jest 废弃的方法
+  'no-deprecated-functions': 'error',
 
   // 禁止使用钩子
   'no-hooks': 'off',

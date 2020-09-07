@@ -193,6 +193,7 @@ const rules = {
   'no-magic-numbers': ['error', {
     ignore: [-1, 0, 1, 2, 3, 5, 10, 100, 1000, 7, 24, 30, 60, 200, 400],
     ignoreArrayIndexes: true,
+    ignoreDefaultValues: true,
   }],
   // 禁用八进制字面量
   'no-octal': 'error',

@@ -140,6 +140,7 @@ const rules = {
   'no-unsafe-return': 'error',
   // 不要错误的使用 void 类型
   'no-invalid-void-type': ['off', { allowInGenericTypeArguments: true }],
+  'consistent-type-imports': ['error', { prefer: 'type-imports' }],
 
   /* -------------------------------------------------------------------------- */
   /*                           number & string & regex                          */
@@ -163,6 +164,7 @@ const rules = {
   'no-magic-numbers': ['error', {
     ignore: [-1, 0, 1, 2, 3, 5, 10, 100, 1000, 7, 24, 30, 60, 200, 400],
     ignoreArrayIndexes: true,
+    ignoreDefaultValues: true,
     ignoreNumericLiteralTypes: true,
     ignoreEnums: true,
     ignoreReadonlyClassProperties: true,
@@ -329,6 +331,8 @@ const rules = {
   'triple-slash-reference': 'error',
   // 禁止使用 ts 风格 import var fs = import 'fs'
   'no-var-requires': 'error',
+  // catch 语句 error 使用明确的类型或 unknown
+  'no-implicit-any-catch': "warn",
 
   /* -------------------------------------------------------------------------- */
   /*                                     off                                    */
