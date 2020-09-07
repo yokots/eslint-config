@@ -27,6 +27,7 @@ const offESRules = {
   'no-new-func': 'off',
   'no-implied-eval': 'off',
   'no-invalid-this': 'off',
+  'no-shadow': 'off',
   'unicorn/prefer-starts-ends-with': 'off',
   'unicorn/prefer-includes': 'off',
   'import/export': 'off',
@@ -317,6 +318,8 @@ const rules = {
   'no-invalid-this': 'error',
   // 禁止非空判断在双等或三等语句中
   'no-confusing-non-null-assertion': 'error',
+  // 禁止变量声明与外层作用域的变量同名
+  'no-shadow': 'error',
 
   /* -------------------------------------------------------------------------- */
   /*                                    other                                   */
