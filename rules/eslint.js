@@ -244,7 +244,7 @@ const rules = {
   // 强制数组方法的回调函数中有 return 语句
   'array-callback-return': 'error',
   // 优先使用数组和对象解构
-  'prefer-destructuring': 'error',
+  'prefer-destructuring': ['error', { AssignmentExpression: {array: false, object: false}}],
   // 禁止使用空解构模式
   'no-empty-pattern': 'error',
 
