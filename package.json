@@ -2,6 +2,10 @@
   "name": "@yokots/eslint-config",
   "version": "1.0.0",
   "description": "eslint rules for typescript and jest",
+  "keywords": [
+    "eslint",
+    "typescript-eslint"
+  ],
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
