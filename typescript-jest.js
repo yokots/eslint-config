@@ -1,8 +1,5 @@
 module.exports = {
-  extends: [
-    './typescript',
-    './jest',
-  ],
+  extends: ['./jest'],
   rules: {
     '@typescript-eslint/no-unsafe-call': 'off',
     '@typescript-eslint/no-unsafe-member-access': 'off',

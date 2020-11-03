@@ -29,6 +29,7 @@ const offESRules = {
   'no-invalid-this': 'off',
   'no-shadow': 'off',
   'no-loop-func': 'off',
+  'no-undef': 'off',
   'unicorn/prefer-starts-ends-with': 'off',
   'unicorn/prefer-includes': 'off',
   'import/export': 'off',
@@ -388,4 +389,17 @@ const plugin = '@typescript-eslint';
 module.exports = {
   plugins: [plugin],
   rules: Object.assign(offESRules, prefixRules(rules, plugin)),
+  overrides: [
+    {
+      files: ['*.d.ts'],
+      rules: {
+        'max-lines': 'off',
+        '@typescript-eslint/naming-convention': 'off',
+        '@typescript-eslint/method-signature-style': 'off',
+        'import/unambiguous': 'off',
+        'import/no-default-export': 'off',
+        'unicorn/no-abusive-eslint-disable': 'off',
+      },
+    },
+  ],
 };

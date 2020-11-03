@@ -1,1 +1,6 @@
-module.exports = require('./rules/jest');
+module.exports = {
+  extends: ["./rules/jest"],
+  env: {
+    jest: true,
+  },
+};

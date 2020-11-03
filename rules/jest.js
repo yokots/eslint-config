@@ -106,9 +106,6 @@ const rules = {
 const plugin = 'jest';
 
 module.exports = {
-  env: {
-    jest: true,
-  },
   plugins: [plugin],
   rules: Object.assign(offRules, prefixRules(rules, plugin)),
 };
