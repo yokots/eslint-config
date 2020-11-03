@@ -6,6 +6,9 @@
     "eslint",
     "typescript-eslint"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
