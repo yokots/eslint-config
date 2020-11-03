@@ -82,8 +82,8 @@ const rules = {
   'no-extra-semi': 'error',
   // 读取对象值使用 obj.xxx 而不是 obj['xxx']
   'dot-notation': ['error', {
-    allowPrivateClassPropertyAccess: true,
-    allowProtectedClassPropertyAccess: true,
+    allowPrivateClassPropertyAccess: false,
+    allowProtectedClassPropertyAccess: false,
   }],
   // 大括号换行风格
   'brace-style': ['error', '1tbs', { allowSingleLine: true }],
