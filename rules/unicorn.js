@@ -11,6 +11,10 @@ const rules = {
   'no-zero-fractions': 'error',
   // 使用 Number.isNaN Number.parseInt 而不是全局的函数
   'prefer-number-properties': 'error',
+  // 使用 Math.trunc 去除小数部分而不是二进制操作符
+  'prefer-math-trunc': 'error',
+  // 数字分割符规则一致
+  'numeric-separators-style': 'error',
 
   // encoding
   // 转义的字符使用大写形式
@@ -85,6 +89,8 @@ const rules = {
   'new-for-builtins': 'error',
   // 使用 Buffer.from() 和 Buffer.alloc() 代替废弃的 new Buffer()
   'no-new-buffer': 'error',
+  // 简单的 if-else 代码用三元操作符完成
+  'prefer-ternary': 'error',
   // 禁止嵌套的三元表达式，需嵌套括号
   'no-nested-ternary': 'off',
   // 使用 eslint-disable 时要明确指定禁用哪条规则

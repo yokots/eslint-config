@@ -33,6 +33,7 @@ const offESRules = {
   'unicorn/prefer-includes': 'off',
   'import/export': 'off',
   'import/no-unresolved': 'off',
+  'space-infix-ops': 'off',
 };
 
 const rules = {
@@ -80,7 +81,10 @@ const rules = {
   // 不要有多余的分号
   'no-extra-semi': 'error',
   // 读取对象值使用 obj.xxx 而不是 obj['xxx']
-  'dot-notation': ['error', { allowPrivateClassPropertyAccess: false }],
+  'dot-notation': ['error', {
+    allowPrivateClassPropertyAccess: true,
+    allowProtectedClassPropertyAccess: true,
+  }],
   // 大括号换行风格
   'brace-style': ['error', '1tbs', { allowSingleLine: true }],
   // 逗号后有一个空格
@@ -106,6 +110,7 @@ const rules = {
       requireLast: false
     }
   }],
+  'space-infix-ops': 'error',
 
   /* -------------------------------------------------------------------------- */
   /*                               interface, type                              */
@@ -142,7 +147,10 @@ const rules = {
   'no-unsafe-return': 'error',
   // 不要错误的使用 void 类型
   'no-invalid-void-type': ['off', { allowInGenericTypeArguments: true }],
+  // 使用类型引入
   'consistent-type-imports': ['error', { prefer: 'type-imports' }],
+  // 使用泛型时禁止不必要的类型约束
+  'no-unnecessary-type-constraint': 'error',
 
   /* -------------------------------------------------------------------------- */
   /*                           number & string & regex                          */
