@@ -334,6 +334,9 @@ const rules = {
   }],
   // 禁止在循环中创建函数
   'no-loop-func': 'error',
+  'no-confusing-void-expression': ['error', {
+    ignoreArrowShorthand: true,
+  }],
 
   /* -------------------------------------------------------------------------- */
   /*                                    other                                   */
