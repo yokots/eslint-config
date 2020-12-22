@@ -219,6 +219,8 @@ const rules = {
   'no-template-curly-in-string': 'error',
   // 小数点前后要有数字 not .1 而是 0.1
   'no-floating-decimal': 'error',
+  // 禁止在字符串文字中使用\ 8和\ 9转义序列
+  'no-nonoctal-decimal-escape': 'error',
 
   /* -------------------------------------------------------------------------- */
   /*                               object & array                               */
@@ -437,6 +439,8 @@ const rules = {
   'no-import-assign': 'error',
   // 禁止循环中执行不到的 break return throw 等语句
   'no-unreachable-loop': 'error',
+  // 禁止在未定义值的上下文中使用可选链接
+  'no-unsafe-optional-chaining': 'error',
 
   /* -------------------------------------------------------------------------- */
   /*                                   regexp                                   */
