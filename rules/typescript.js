@@ -152,6 +152,8 @@ const rules = {
   'consistent-type-imports': ['error', { prefer: 'type-imports' }],
   // 使用泛型时禁止不必要的类型约束
   'no-unnecessary-type-constraint': 'error',
+  // 在可能的情况下，优先使用非空断言而不是显式类型转换
+  'non-nullable-type-assertion-style': 'error',
 
   /* -------------------------------------------------------------------------- */
   /*                           number & string & regex                          */
