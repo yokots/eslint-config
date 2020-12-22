@@ -16,6 +16,10 @@ const rules = {
   // 数字分割符规则一致
   'numeric-separators-style': 'error',
 
+  'no-lonely-if': 'error',
+  'empty-brace-spaces': 'error',
+  'refer-date-now': 'error',
+
   // encoding
   // 转义的字符使用大写形式
   'escape-case': 'error',
