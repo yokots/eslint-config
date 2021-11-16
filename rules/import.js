@@ -44,11 +44,18 @@ const rules = {
   // 导入文件不需要文件后缀，导入 json 文件时需要
   'extensions': ['error', 'never', { 'json': 'always' }],
   // 导入文件排序规则 https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
-  'order': ['error', { 'newlines-between': 'always' }],
+  'order': ['error', {
+    'newlines-between': 'always',
+    'warnOnUnassignedImports': true,
+  }],
   // 导入语句之后加一行空行
   'newline-after-import': 'error',
   // 禁止未使用的导入
   'no-unassigned-import': 'error',
+  // workspaces 工作目录时,不要使用相对路径来引入包
+  "no-relative-packages": "error",
+  // import 导入不要使用 exports 导出
+  "no-import-module-exports": "error",
 
   // 模块文件要有明确的导入导出
   'unambiguous': 'warn',

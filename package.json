@@ -12,14 +12,14 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "~4.11.0",
-    "@typescript-eslint/parser": "~4.11.0",
-    "eslint-plugin-import": "~2.22.1",
-    "eslint-plugin-jest": "~24.1.0",
-    "eslint-plugin-tsdoc": "~0.2.7",
-    "eslint-plugin-unicorn": "~24.0.0"
+    "@typescript-eslint/eslint-plugin": "~5.4.0",
+    "@typescript-eslint/parser": "~5.4.0",
+    "eslint-plugin-import": "~2.25.3",
+    "eslint-plugin-jest": "~25.2.4",
+    "eslint-plugin-tsdoc": "~0.2.14",
+    "eslint-plugin-unicorn": "~38.0.1"
   },
   "peerDependencies": {
-    "eslint": "^7.16.0"
+    "eslint": "~8.2.0"
   }
 }

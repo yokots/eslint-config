@@ -364,7 +364,7 @@ const rules = {
   // 禁止重复的类成员
   'no-dupe-class-members': 'error',
   // 一个文件中最多有一个类
-  'max-classes-per-file': ['error', 1],
+  'max-classes-per-file': ['error', { max: 1, ignoreExpressions: true }],
   // 禁止修改声明为类的变量
   'no-class-assign': 'error',
   // 使用 new 语句要进行赋值操作
@@ -387,6 +387,8 @@ const rules = {
   'grouped-accessor-pairs': ['error', 'getBeforeSet'],
   // getter 语句需要返回值
   'getter-return': 'error',
+  // 禁止未使用的私有类成员
+  'no-unused-private-class-members': 'error',
 
   /* -------------------------------------------------------------------------- */
   /*                                best-practice                               */
@@ -514,6 +516,8 @@ const rules = {
   'no-new-wrappers': 'off', // use unicorn new-for-builtins
   'no-duplicated-import': 'off', // import plugin
   'sort-imports': 'off', // import plugin
+  // 禁止导入的包或路径
+  'no-restricted-imports': 'off',
   // 禁止部分名称用作导出
   'no-restricted-exports': 'off',
   // 所有变量使用一个声明语句声明

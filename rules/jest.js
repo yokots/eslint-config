@@ -7,16 +7,19 @@ const offRules = {
 };
 
 const rules = {
+  // describe 最大嵌套深度
+  'max-nested-describe': ['error', { max: 3 }],
+
   // 禁止使用 Jasmine 的全局配置项
   'no-jasmine-globals': 'error',
   // 正确的使用 describe 语句
-  'valid-describe': 'error',
+  'valid-describe-callback': 'error',
   // title 要正确设置
   'valid-title': 'error',
   // 不要使用一样的 title
   'no-identical-title': 'error',
   // title 使用小写
-  'lowercase-name': ['error', { ignoreTopLevelDescribe: true }],
+  'prefer-lowercase-title': ['error', { ignoreTopLevelDescribe: true }],
   // 正确使用 expect 语句
   'valid-expect': ['error', { alwaysAwait: true }],
   // 确保在测试中使用断言
@@ -32,6 +35,8 @@ const rules = {
   'valid-expect-in-promise': 'error',
   // 不要使用 done 来测试异步
   'no-done-callback': 'error',
+  // 使用 await expect(...).resolves.<matchers> 而不是 expect(await ....).<matchers>
+  'prefer-expect-resolves': 'error',
 
   // 不要注释掉测试，使用 test.only, describe.only
   'no-commented-out-tests': 'error',
@@ -48,6 +53,8 @@ const rules = {
 
   // 禁止使用钩子
   'no-hooks': 'off',
+  // 使用 hook 来做测试前的准备和测试后的清理工作
+  'require-hook': 'error',
   // 钩子要放在最前
   'prefer-hooks-on-top': 'error',
   // 不要有重复的钩子
@@ -60,12 +67,6 @@ const rules = {
   // 不要从 __mocks__ 文件夹导入文件
   'no-mocks-import': 'error',
 
-  // deprecated 不要使用 toBeTruthy() 和 toBeFalsy()
-  // 'no-truthy-falsy': 'off',
-  // deprecated 不要使用 expect.resolves
-  // 'no-expect-resolves': 'off',
-  // deprecated prefer-inline-snapshots
-  // 'prefer-inline-snapshots': 'off',
   'no-restricted-matchers': ['error', {
     "resolves": "Use `expect(await promise)` instead",
     "toBeTruthy": "Avoid `toBeTruthy`",
@@ -84,16 +85,14 @@ const rules = {
   'prefer-spy-on': 'error',
   // 使用 strictEqual
   'prefer-strict-equal': 'error',
-  // 使用 toBeNull 而不是 toBe(null)
-  'prefer-to-be-null': 'error',
-  // 使用 toBeUndefined 而不是 toBe(undefined)
-  'prefer-to-be-undefined': 'error',
   // 使用 toContain
   'prefer-to-contain': 'error',
   // 使用 toHaveLength
   'prefer-to-have-length': 'error',
   // 抛出错误时要包含 message
   'require-to-throw-message': 'error',
+  // 针对基本类型做判断时使用 toBe
+  'prefer-to-be': 'error',
 
   // 使用 expect.assertions 来确保断言被调用
   'prefer-expect-assertions': 'off',

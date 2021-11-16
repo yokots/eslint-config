@@ -30,11 +30,13 @@ const offESRules = {
   'no-shadow': 'off',
   'no-loop-func': 'off',
   'no-undef': 'off',
+  'space-infix-ops': 'off',
+  'object-curly-spacing': 'off',
+  'padding-line-between-statements': 'off',
   'unicorn/prefer-starts-ends-with': 'off',
   'unicorn/prefer-includes': 'off',
   'import/export': 'off',
   'import/no-unresolved': 'off',
-  'space-infix-ops': 'off',
 };
 
 const rules = {
@@ -111,7 +113,25 @@ const rules = {
       requireLast: false
     }
   }],
-  'space-infix-ops': 'error',
+  // 中缀操作符两边要有空格
+  'space-infix-ops': ['error', { int32Hint: false }],
+  // 要求大括号中有空格
+  'object-curly-spacing': ['error', 'always'],
+  // 语句间填充空行规则
+  'padding-line-between-statements': [
+    'error',
+    { blankLine: 'always', prev: '*', next: 'class' },
+    { blankLine: 'always', prev: '*', next: 'function' },
+    { blankLine: 'always', prev: '*', next: 'try' },
+    { blankLine: 'always', prev: 'block-like', next: 'export' },
+    { blankLine: 'always', prev: '*', next: 'block-like' },
+    { blankLine: 'always', prev: 'block-like', next: '*' },
+    { blankLine: 'always', prev: 'multiline-const', next: '*' },
+    { blankLine: 'always', prev: 'multiline-let', next: '*' },
+    { blankLine: 'always', prev: 'multiline-block-like', next: 'return' },
+    { blankLine: 'always', prev: 'break', next: '*' },
+    { blankLine: 'always', prev: '*', next: ['interface', 'type'] },
+  ],
 
   /* -------------------------------------------------------------------------- */
   /*                               interface, type                              */
@@ -150,6 +170,8 @@ const rules = {
   'no-invalid-void-type': ['off', { allowInGenericTypeArguments: true }],
   // 使用类型引入
   'consistent-type-imports': ['error', { prefer: 'type-imports' }],
+  // 使用类型导出
+  'consistent-type-exports': 'error',
   // 使用泛型时禁止不必要的类型约束
   'no-unnecessary-type-constraint': 'error',
   // 在可能的情况下，优先使用非空断言而不是显式类型转换
@@ -170,6 +192,7 @@ const rules = {
     allowBoolean: true,
     allowNullish: true,
     allowAny: true,
+    allowRegExp: true,
   }],
   // 避免输出 '[object Object]'
   'no-base-to-string': 'error',
@@ -233,6 +256,10 @@ const rules = {
   'func-call-spacing': ['error', 'never'],
   // 不要有空函数
   'no-empty-function': 'error',
+  // 调用函数不要传递类型为 any 的参数,除非函数签名声明参数类型为 unknown
+  'no-unsafe-argument': 'error',
+  // 链式调用方法签名返回 this 类型
+  'prefer-return-this-type': 'error',
 
   /* -------------------------------------------------------------------------- */
   /*                                   promise                                  */
@@ -320,6 +347,8 @@ const rules = {
   'no-implied-eval': 'error',
   // 禁止在可选链操作符后使用非空断言
   'no-non-null-asserted-optional-chain': 'error',
+  // 禁止在空只合并操作符之前使用非空断言
+  'no-non-null-asserted-nullish-coalescing': 'error',
   // case 要覆盖所有情况或者有 default
   'switch-exhaustiveness-check': 'error',
   // 使用空值合并运算符
@@ -355,6 +384,10 @@ const rules = {
   'no-var-requires': 'error',
   // catch 语句 error 使用明确的类型或 unknown
   'no-implicit-any-catch': "warn",
+  // Enum 成员使用字面量值
+  'prefer-literal-enum-member': ['error', { allowBitwiseExpressions: true }],
+  // 不要使用无意义的 void 操作符
+  'no-meaningless-void-operator': 'error',
 
   /* -------------------------------------------------------------------------- */
   /*                                     off                                    */
@@ -387,6 +420,8 @@ const rules = {
   'no-unsafe-assignment': 'off',
   // 使用 enum 时初始化
   'prefer-enum-initializers': 'off',
+  // 对联合/交叉类型排序
+  'sort-type-union-intersection-members': 'off',
 };
 
 const plugin = '@typescript-eslint';
