@@ -15,7 +15,7 @@
     "@typescript-eslint/eslint-plugin": "~5.4.0",
     "@typescript-eslint/parser": "~5.4.0",
     "eslint-plugin-import": "~2.25.3",
-    "eslint-plugin-jest": "~25.2.4",
+    "eslint-plugin-jest": "~28.8.0",
     "eslint-plugin-tsdoc": "~0.2.14",
     "eslint-plugin-unicorn": "~38.0.1"
   },
